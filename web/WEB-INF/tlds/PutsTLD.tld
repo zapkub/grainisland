@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>putstld</short-name>
+  <uri>/WEB-INF/tlds/PutsTLD</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+         translation time. Validator entries look like this: 
+      <validator>
+          <validator-class>com.mycompany.TagLibValidator</validator-class>
+          <init-param>
+             <param-name>parameter</param-name>
+             <param-value>value</param-value>
+	  </init-param>
+      </validator>
+   -->
+  <!-- A tag library can register Servlet Context event listeners in
+        case it needs to react to such events. Listener entries look
+        like this: 
+     <listener>
+         <listener-class>com.mycompany.TagLibListener</listener-class> 
+     </listener>
+   -->
+  <tag>
+    <name>GetAvatar</name>
+    <tag-class>sit.int303.grianisland.system.tag.GetAvatar</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>userId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+  <tag>
+    <name>GetName</name>
+    <tag-class>sit.int303.grianisland.system.tag.GetName</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>userId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+  <tag>
+    <name>inRequestFriend</name>
+    <tag-class>sit.int303.grianisland.system.tag.inRequestFriend</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>player</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Object</type>
+    </attribute>
+    <attribute>
+      <name>targetId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+  <tag>
+    <name>GetMapName</name>
+    <tag-class>sit.int303.grianisland.system.tag.GetMapName</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>mapId</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+    <attribute>
+      <name>mapmanager</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Object</type>
+    </attribute>
+  </tag>
+</taglib>
